@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Forgotten House</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="game"></div>
+
+  <section id="menu" class="overlay visible">
+    <div class="menu-card">
+      <p class="eyebrow">A psychological horror</p>
+      <h1>THE FORGOTTEN<br />HOUSE</h1>
+      <button id="new-game">NEW GAME</button>
+      <button id="continue-game">CONTINUE</button>
+      <button id="settings">SETTINGS</button>
+      <button id="about">ABOUT</button>
+    </div>
+  </section>
+
+  <section id="pause" class="overlay">
+    <div class="menu-card small">
+      <p class="eyebrow">GAME PAUSED</p>
+      <h2>Pause</h2>
+      <button id="resume">RESUME</button>
+      <button id="pause-settings">SETTINGS</button>
+      <button id="save-game">SAVE</button>
+    </div>
+  </section>
+
+  <div id="hud">
+    <div id="crosshair"></div>
+    <div id="interaction"></div>
+    <div id="notification"></div>
+    <div id="flashlight">
+      <span>FLASHLIGHT</span>
+      <div><i id="battery-bar"></i></div>
+    </div>
+    <div id="objective">Explore the house</div>
+  </div>
+
+  <div id="letter" class="overlay">
+    <article>
+      <button id="close-letter" aria-label="Close">×</button>
+      <p class="eyebrow">Torn page</p>
+      <h2>Don't let it find you</h2>
+      <p>My brother disappeared after midnight. The radio keeps repeating the same sentence: <strong>THE BASEMENT DOOR IS OPEN.</strong></p>
+      <p>The brass key is hidden near the old radio. It opens the room below the stairs.</p>
+    </article>
+  </div>
+
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}
+  </script>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
